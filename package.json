@@ -1,0 +1,15 @@
+{
+  "name": "deployable",
+  "version": "1.0.0",
+  "description": "[![Stories in Ready](https://badge.waffle.io/Flatten-Threat/Spree.png?label=ready&title=Ready)](https://waffle.io/Flatten-Threat/Spree) # Spree",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
