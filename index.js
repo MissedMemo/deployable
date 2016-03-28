@@ -1,16 +1,20 @@
 import React from 'react'
 import { render } from 'react-dom'
-//import { Router, Route, browserHistory, IndexRoute } from 'react-router'
+import { Router, Route, browserHistory, IndexRoute } from 'react-router'
 
 import App from './components/app'
-/*
-import SignInDialog from './components/sign-in-dialog'
+//import SignInDialog from './components/sign-in-dialog'
 import Home from './views/home'
 import Travels from './views/travels'
-*/
+
 
 render((
-  <App />
+  <Router history={browserHistory}>
+    <Route path="/" component={App}>
+      <IndexRoute component={Home}/>
+      <Route path="travels" component={Travels}/>
+    </Route>
+  </Router>
 ), document.getElementById('content'))
 
 /*
