@@ -21,7 +21,8 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        Hello, React
+        <h1>Menu Bar Always at Top of Screen</h1>
+        {this.props.children}
       </div>
     );
   }

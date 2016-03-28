@@ -54,7 +54,7 @@ export default class Travels extends Component {
   render() {
     return (
       <div>
-        <h1>This is the travels page!</h1>
+        <h2>This is the travels page!</h2>
       </div>
     );
   }
