@@ -1,5 +1,4 @@
 var express = require('express');
-var path = require('path');
 //var compression = require('compression');
 //var mongoose = require('mongoose');
 var demoData = require( './models/demo-data' );
@@ -9,12 +8,7 @@ var app = express();
 
 
 // serve static files like index.html, css etc.
-app.use( express.static( path.join( __dirname, 'public' ) ) );
-
-// send all requests to index.html so browserHistory in React Router works
-// app.get('*', function (req, res) {
-//   res.sendFile( path.join(__dirname, 'public', 'index.html') );
-// });
+app.use( express.static( __dirname + '/public' ) );
 
 
 var PORT = process.env.PORT || 3000;
@@ -55,8 +49,7 @@ var server = app.listen(PORT, function() {
 app.get( '/api/activities', function( req, res ) {
 
   res.json( demoData );
-  //res.json( "Hello" );
-
+  
   /*
   Activity.find( {}, function(error, data) {
 
