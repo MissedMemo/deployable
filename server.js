@@ -1,4 +1,5 @@
 var express = require('express');
+var path = require('path');
 /*
 var compression = require('compression');
 var mongoose = require('mongoose');
@@ -9,7 +10,12 @@ var app = express();
 
 
 // serve static files like index.html, css etc.
-app.use( express.static( __dirname + '/public' ) );
+app.use( express.static( path.join( __dirname, 'public' ) ) );
+
+// send all requests to index.html so browserHistory in React Router works
+app.get('*', function (req, res) {
+  res.sendFile( path.join(__dirname, 'public', 'index.html') );
+});
 
 
 var PORT = process.env.PORT || 3000;
