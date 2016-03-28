@@ -25,16 +25,3 @@ export default class Home extends Component {
   }
 
 }
-
-
-/*
-  render() {
-    return (
-      <div className="image-area">
-        <div className="home-title">
-            Choose your next adventure.
-        </div>
-      </div>
-    );
-  }
-  */

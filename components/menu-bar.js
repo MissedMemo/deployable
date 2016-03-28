@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
 
+
 export default class MenuBar extends Component {
 
   render() {
@@ -8,7 +9,7 @@ export default class MenuBar extends Component {
       <div className="menu-bar">
         <div className="title">AdventureUs</div>
         <div className="menu">
-          <Link to="travels" className="menu-link">Sign In</Link>
+          <Link to="sign-in" className="menu-link">Sign In</Link>
         </div>
       </div>
     );
