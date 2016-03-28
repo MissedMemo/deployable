@@ -29,8 +29,10 @@ export default class Home extends Component {
 
   render() {
     return (
-      <div>
-        <h2>This is the HOME page!</h2>
+      <div className="image-area">
+        <div className="home-title">
+            Choose your next adventure.
+        </div>
       </div>
     );
   }

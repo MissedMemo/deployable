@@ -1,0 +1,199 @@
+/********************************
+      Global Elements
+*********************************/
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Raleway, sans-serif;
+}
+
+/* clear floats (add to parent container) */
+.clear-fix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* remove default <ul> list styles */
+.unstyled-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+
+/* TEMPORARY, unless/until we use Bootstrap etc.,
+// create margins around page content */
+
+.bordered-page {
+  padding: 20px;
+}
+
+
+/********************************
+          Menu Bar
+*********************************/
+
+.menu-bar {
+  position: relative;
+  background-color: #FF8E76;
+  color: rgba(255,255,100,0.75);
+  text-align: left;
+  padding: 12px 20px;
+}
+
+.menu-bar .title {
+  font-size: 24px;
+  font-family: Raleway, sans-serif;
+  font-weight: bold;
+  letter-spacing: 1.25px;
+}
+
+.menu-bar .menu {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  text-transform: uppercase;
+}
+
+.menu .menu-link {
+  text-decoration: none;
+  color: white;
+  letter-spacing: 1.25px;
+}
+
+
+/********************************
+           Home Page
+*********************************/
+
+/*.temp-page-title {
+  text-align: center;
+}*/
+
+.image-area {
+  background-image: url(../images/ManInCity.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}
+
+.home-title {
+  font-size: 60px;
+  text-align: center;
+  color: #FF8E76;
+  font-weight: bold;
+  position: relative;
+  padding-top: 150px;
+}
+
+.home-description {
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 25px;
+  color: white;
+  /*top right bottom left*/
+  margin: 160px 250px auto 250px;
+  width: 300px;
+  float: left;
+}
+
+.home-description-h2 {
+  color: white;
+  text-align: center;
+}
+
+/********************************
+           Login Dialog
+*********************************/
+
+.sign-in-dialog {
+  position: relative;
+  width: 320px;
+  margin: 32px auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, .3);
+  border-radius: 10px;
+}
+
+.sign-in-dialog input {
+  display: block;
+  width: 250px;
+  margin: 7px auto;
+  padding: 11px;
+  font-size: 14px;
+  border: 1px solid #7D7D7D;
+  border-radius: 4px;
+}
+
+.sign-in-dialog input[type='submit'] {
+  background-color: #428BCA;
+  color: rgb(225,225,255);
+  border: none;
+  font-size: 16px;
+}
+
+.sign-in-dialog input[type='submit']:hover {
+  background-color: #529BDA;
+  color: white;
+}
+
+
+/* TEMPORARY HACK !!!
+   remove temp hack button elements as soon as
+   we handle App 'sign-in' state properly using
+   a React pop-up component (WITHOUT routing?)
+*/
+
+.sign-in-dialog .temp-hack-button {
+  display: block;
+  width: 250px;
+  margin: 7px auto;
+  padding: 11px;
+  background-color: #428BCA;
+  color: rgb(225,225,255);
+  border-radius: 4px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* TEMPORARY HACK !!! (remove this too) */
+
+.sign-in-dialog .temp-hack-button:hover {
+  background-color: #529BDA;
+  color: white;
+}
+
+
+.sign-in-dialog footer {
+  margin-top: 24px;
+  text-align: right;
+}
+
+.sign-in-dialog footer a {
+  margin-left: 8px;
+  text-transform: uppercase;
+}
+
+
+/********************************
+          Travels Page
+*********************************/
+
+.activity-list li {
+  margin-top: 16px;
+}
+
+.activity-image {
+  height: 200px;
+  margin-bottom: 8px;
+  background-color: #428BCA;
+}
+
