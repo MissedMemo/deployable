@@ -1,5 +1,4 @@
 var express = require('express');
-var path = require('path');
 /*
 var compression = require('compression');
 var mongoose = require('mongoose');
@@ -10,7 +9,7 @@ var app = express();
 
 
 // serve static files like index.html, css etc.
-app.use( express.static( path.join( __dirname, 'public' ) ) );
+app.use( express.static( __dirname + '/public' ) );
 
 
 var PORT = process.env.PORT || 3000;
