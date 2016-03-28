@@ -1,4 +1,5 @@
 var express = require('express');
+var path = require('path');
 //var compression = require('compression');
 //var mongoose = require('mongoose');
 var demoData = require( './models/demo-data' );
@@ -9,6 +10,21 @@ var app = express();
 
 // serve static files like index.html, css etc.
 app.use( express.static( __dirname + '/public' ) );
+
+
+app.get('*', function (req, res) {
+  
+  var url = req.url;
+
+  if( url === '/api/activities' ) {
+    res.json( demoData );
+  }
+  else {
+    // return index.html (keeps react-router browserHistory working on page refresh)
+    res.sendFile( path.join(__dirname, 'public', 'index.html') );
+  }
+
+});
 
 
 var PORT = process.env.PORT || 3000;
@@ -46,9 +62,9 @@ var server = app.listen(PORT, function() {
 
 //var Activity = require( './models/activity' );
 
-app.get( '/api/activities', function( req, res ) {
+//app.get( '/api/activities', function( req, res ) {
 
-  res.json( demoData );
+  //res.json( demoData );
   
   /*
   Activity.find( {}, function(error, data) {
@@ -65,5 +81,5 @@ app.get( '/api/activities', function( req, res ) {
   });
   */
 
-});
+//});
 
