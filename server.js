@@ -3,6 +3,7 @@ var path = require('path');
 //var compression = require('compression');
 var mongoose = require('mongoose');
 var demoData = require( './models/demo-data' );
+var Activity = require( './models/activity' );
 
 var app = express();
 //app.use( compression() ); // must come first!
@@ -17,7 +18,7 @@ app.get('*', function (req, res) {
   var url = req.url;
 
   if( url === '/api/activities' ) {
-    res.json( demoData );
+    sendActivityData(res);
   }
   else {
     // return index.html (keeps react-router browserHistory working on page refresh)
@@ -34,9 +35,9 @@ var server = app.listen(PORT, function() {
 
   console.log('\nProduction Express server running at localhost:' + PORT);
 
-  /*
-  var dbURI = 'mongodb://localhost/adventureUS';
-
+  //var dbURI = 'mongodb://localhost/adventureUS';
+  var dbURI = 'mongodb://missedmemo:34212x@ds025379.mlab.com:25379/tga';
+  
   mongoose.connect( dbURI, function(error) {
     if(error) {
       console.log( '\n****** ERROR! ****** ERROR! ****** ERROR! ******' );
@@ -50,7 +51,6 @@ var server = app.listen(PORT, function() {
     console.log( 'successful db connection to: ' + dbURI + '\n' );
     demoData.initDatabase(); // clear database, and seed with demo data
   });
-  */
 
 });
 
@@ -59,6 +59,24 @@ var server = app.listen(PORT, function() {
 /***********************************************************
   move this, and other API handlers, into their own file...
 ***********************************************************/
+
+function sendActivityData( res ) {
+  
+  Activity.find( {}, function(error, data) {
+
+    if(error) {
+      res.json(error);
+    }
+    else if( data === null ) {
+      res.json('Empty data')
+    }
+    else {
+      res.json(data);
+    }      
+  });
+
+};
+
 
 //var Activity = require( './models/activity' );
 

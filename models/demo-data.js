@@ -1,7 +1,7 @@
 var Activity = require( './activity' );
 
 
-//module.exports.initDatabase = function() {
+module.exports.initDatabase = function() {
   
   /********************* IMPORTANT !!! ************************
   need to figure out how to use demo data in dev. mode AND
@@ -9,8 +9,6 @@ var Activity = require( './activity' );
   *************************************************************/
 
   //if( app.get('env') === 'development' ) {
-
-    /*
 
     Activity.remove().exec(); // clear database
 
@@ -21,17 +19,16 @@ var Activity = require( './activity' );
       else
         console.log( "seeded database with " + r.insertedCount + " records\n" );
     });
-    */
 
   //}
-//};
+};
 
 
-//var demoData = [
-module.exports = [
+var demoData = [
+//module.exports = [
 
   {
-    'title' : 'Great Spot for Ice Cream!',
+    'title' : 'Awesome Spot for Ice Cream!',
     'description' : 'I LUV this little corner cafe, and the owner is the sweetest old lady (practice your Greek language skills, for some free Ouzo!).',
     'image' : 'http://someurl...'
   },
