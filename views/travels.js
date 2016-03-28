@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
-//import Activities from '../components/activities'
+import Activities from '../components/activities'
 //import axios from 'axios';
 
 
 export default class Travels extends Component {
 
-  /*
   constructor(props) {
     super(props);
     this.state = { activities: [] };
@@ -14,6 +13,17 @@ export default class Travels extends Component {
       
   componentWillMount() {
 
+    this.setState({
+      activities: [
+        {title: '(dev. mode DB access still under development...)', description: 'blah blah blah...'},
+        {title: '(dev. mode DB access still under development...)', description: 'blah blah blah...'},
+        {title: '(dev. mode DB access still under development...)', description: 'blah blah blah...'},
+        {title: '(dev. mode DB access still under development...)', description: 'blah blah blah...'},
+        {title: '(dev. mode DB access still under development...)', description: 'blah blah blah...'}
+      ]
+    });
+
+    /*
     axios.get('/api/activities')
     .then( function(resp) {
 
@@ -37,6 +47,7 @@ export default class Travels extends Component {
       })
 
     }.bind(this));
+    */
   }
   
 
@@ -49,13 +60,6 @@ export default class Travels extends Component {
       </div>
     );
   }
-  */
-
-  render() {
-    return (
-      <div>
-        <h2>This is the travels page!</h2>
-      </div>
-    );
-  }
+  
+  
 };
