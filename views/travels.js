@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Activities from '../components/activities'
-//import axios from 'axios';
+import axios from 'axios';
 
 
 export default class Travels extends Component {
@@ -13,17 +13,6 @@ export default class Travels extends Component {
       
   componentWillMount() {
 
-    this.setState({
-      activities: [
-        {title: '(dev. mode DB access still under development...)', description: 'blah blah blah...'},
-        {title: '(dev. mode DB access still under development...)', description: 'blah blah blah...'},
-        {title: '(dev. mode DB access still under development...)', description: 'blah blah blah...'},
-        {title: '(dev. mode DB access still under development...)', description: 'blah blah blah...'},
-        {title: '(dev. mode DB access still under development...)', description: 'blah blah blah...'}
-      ]
-    });
-
-    /*
     axios.get('/api/activities')
     .then( function(resp) {
 
@@ -47,7 +36,6 @@ export default class Travels extends Component {
       })
 
     }.bind(this));
-    */
   }
   
 

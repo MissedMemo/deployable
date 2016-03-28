@@ -1,10 +1,9 @@
 var express = require('express');
 var path = require('path');
-/*
-var compression = require('compression');
-var mongoose = require('mongoose');
+//var compression = require('compression');
+//var mongoose = require('mongoose');
 var demoData = require( './models/demo-data' );
-*/
+
 var app = express();
 //app.use( compression() ); // must come first!
 
@@ -13,9 +12,9 @@ var app = express();
 app.use( express.static( path.join( __dirname, 'public' ) ) );
 
 // send all requests to index.html so browserHistory in React Router works
-app.get('*', function (req, res) {
-  res.sendFile( path.join(__dirname, 'public', 'index.html') );
-});
+// app.get('*', function (req, res) {
+//   res.sendFile( path.join(__dirname, 'public', 'index.html') );
+// });
 
 
 var PORT = process.env.PORT || 3000;
@@ -50,11 +49,15 @@ var server = app.listen(PORT, function() {
 /***********************************************************
   move this, and other API handlers, into their own file...
 ***********************************************************/
-/*
-var Activity = require( './models/activity' );
+
+//var Activity = require( './models/activity' );
 
 app.get( '/api/activities', function( req, res ) {
 
+  res.json( demoData );
+  //res.json( "Hello" );
+
+  /*
   Activity.find( {}, function(error, data) {
 
     if(error) {
@@ -67,6 +70,7 @@ app.get( '/api/activities', function( req, res ) {
       res.json(data);
     }      
   });
+  */
 
 });
-*/
+
