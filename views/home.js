@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 
 export default class Home extends Component {
 
-  /*
   render() {
     return (
       <div className="image-area">
@@ -22,11 +21,13 @@ export default class Home extends Component {
           </ul>
         </div>
       </div>
-      
     )
   }
-  */
 
+}
+
+
+/*
   render() {
     return (
       <div className="image-area">
@@ -36,5 +37,4 @@ export default class Home extends Component {
       </div>
     );
   }
-
-}
+  */
