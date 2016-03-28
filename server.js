@@ -1,7 +1,7 @@
 var express = require('express');
 var path = require('path');
 //var compression = require('compression');
-//var mongoose = require('mongoose');
+var mongoose = require('mongoose');
 var demoData = require( './models/demo-data' );
 
 var app = express();

@@ -1,4 +1,4 @@
-//var Activity = require( './activity' );
+var Activity = require( './activity' );
 
 
 //module.exports.initDatabase = function() {
