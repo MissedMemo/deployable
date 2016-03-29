@@ -60,6 +60,6 @@ var demoData = [
        longitudeDelta: 0.06437302420376056,
        latitudeDelta: 0.05759199042438468
     }
-  },
+  }
 
 ];
